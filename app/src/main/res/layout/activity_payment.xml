@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".PaymentActivity">
+
+    <View
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layoutAnimation="@anim/layout_animation"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/username"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="User Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_below="@+id/username"
+                android:id="@+id/userPhone"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/userPhone"
+                android:background="@color/colorAnalogous"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"/>
+            <TextView
+                android:id="@+id/recordIsEmpty"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="30sp"
+                android:text="Record is Empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_whatsapp_icon"
+                android:id="@+id/shareWhatsApp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/fab_margin"
+                />
+
+            <androidx.cardview.widget.CardView
+
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/rel1"
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/white"
+                android:layout_height="150dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/txtT"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:textSize="20sp"
+                            android:text="Net Total: "
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@+id/txtT"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:id="@+id/totalNet"
+                            android:textSize="20sp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_toStartOf="@+id/paid"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:textSize="20sp"
+                            android:text="Paid: "
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:id="@+id/paid"
+                            android:textSize="20sp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/rem"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@+id/txtT"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:textSize="20sp"
+                            android:text="Remaining: "
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@+id/txtT"
+                            android:layout_toEndOf="@+id/rem"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:id="@+id/remaining"
+                            android:textSize="20sp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adBannerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9867884627688082/1746020263">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

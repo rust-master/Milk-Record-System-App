@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".UserLedger">
+
+    <View
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_marginBottom="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/username"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="User Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_below="@+id/username"
+                android:id="@+id/userphone"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/userphone"
+                android:background="@color/colorAnalogous"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rel1"
+                android:id="@+id/listUserRecord"
+                android:layoutAnimation="@anim/layout_animation_right_to_left"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/recordIsEmpty"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="30sp"
+                android:text="Record is Empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_whatsapp_icon"
+                android:id="@+id/shareWhatsApp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/addRecord"
+                android:layout_margin="@dimen/fab_margin"
+              />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:backgroundTint="@color/mainColor"
+                android:id="@+id/addRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@drawable/ic_baseline_add_24" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/colorAnalogous"
+        android:layout_height="150dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="18sp"
+                    android:text="Milk Total: "
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:id="@+id/total"
+                    android:textSize="20sp"
+                    android:text="$00,000"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll22"
+                android:layout_below="@+id/l1"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="18sp"
+                    android:text="Net Total: "
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:id="@+id/totalNet"
+                    android:textSize="20sp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_below="@+id/ll22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="18sp"
+                    android:text="Paid: "
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:id="@+id/paid"
+                    android:textSize="20sp"
+                    android:text="Rs00,000"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l2"
+                android:layout_margin="8dp"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="16sp"
+                    android:text="Total Milk: "
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:id="@+id/totalmilk"
+                    android:textSize="18sp"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/l2"
+                android:layout_margin="8dp"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="16sp"
+                    android:text="Remaining: "
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:id="@+id/remaining"
+                    android:textSize="18sp"
+                    android:text="Rem"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:textSize="20sp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:id="@+id/btnClearLedger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorNotPaid"
+                    app:backgroundTint="@color/colorNotPaid"
+                    android:layout_margin="10dp"
+                    android:text="Clear Ledger"
+                    android:textColor="@android:color/white" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:textSize="20sp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:id="@+id/btnPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/mainColor"
+                    android:text="Payment"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

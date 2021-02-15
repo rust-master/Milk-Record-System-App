@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/v2"
+        android:background="@drawable/ic_wave"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"/>
+
+    <TextView
+        android:layoutAnimation="@anim/layout_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Milk System"
+        android:textColor="#fff"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layoutAnimation="@anim/layout_animation"
+        android:id="@+id/ll1"
+        android:layout_below="@+id/v2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                android:id="@+id/btnCustomerCard"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorAnalogous"
+                app:cardCornerRadius="25dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_perm_identity_24" />
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/imgHome"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Add Customer"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                android:id="@+id/btnViewCustomerCard"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorAnalogous"
+                app:cardCornerRadius="25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/imgOrders"
+                        android:src="@drawable/ic_baseline_preview_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/imgOrders"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Customers Info"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layoutAnimation="@anim/layout_animation"
+        android:id="@+id/ll2"
+        android:layout_below="@+id/ll1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                android:id="@+id/btnPaymentsCard"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorAnalogous"
+                app:cardCornerRadius="25dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgPay"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_payments_24" />
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/imgPay"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Payments"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                android:id="@+id/btnDeveloperInfo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorAnalogous"
+                app:cardCornerRadius="25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/imgInfo"
+                        android:src="@drawable/ic_baseline_info_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/imgInfo"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Developer Info"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adBannerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9867884627688082/1746020263">
+    </com.google.android.gms.ads.AdView>
+
+
+
+</RelativeLayout>
