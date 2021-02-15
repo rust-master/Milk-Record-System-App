@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -133,17 +134,31 @@ public class UserLedger extends AppCompatActivity {
         }
         paid.setText(paidB);
         String remB = new Database(this).getRemBill(id);
-        if(remB == null)
-        {
+        if(remB == null) {
             remB = "0";
         }
         remaining.setText(remB);
         String netTotal = new Database(getBaseContext()).getTotalBill(id);
-        if(netTotal == null)
-        {
+        if (netTotal == null) {
             netTotal = "0";
         }
         totalNet.setText(netTotal);
+        String colorNet = totalNet.getText().toString();
+        String colorRem = remaining.getText().toString();
+        int netInt = Integer.parseInt(colorNet);
+        int remInt = Integer.parseInt(colorRem);
+        if (netInt < 0) {
+            totalNet.setTextColor(Color.RED);
+        }
+        if (remInt < 0) {
+            remaining.setTextColor(Color.RED);
+        }
+        if (netInt >= 0) {
+            totalNet.setTextColor(Color.WHITE);
+        }
+        if (remInt >= 0) {
+            remaining.setTextColor(Color.WHITE);
+        }
     }
 
     private void showPaymentDialog() {
@@ -566,13 +581,24 @@ public class UserLedger extends AppCompatActivity {
             int finalRem = totl - paidt;
             String strRem = String.valueOf(finalRem);
 
-            new Database(getBaseContext()).updateUserPayment(strRem, paidBill, strRem ,userphone.getText().toString());
+            new Database(getBaseContext()).updateUserPayment(strRem, paidBill, strRem, userphone.getText().toString());
 
-            Snackbar.make(rootLayout,"Updated",Snackbar.LENGTH_SHORT)
+            Snackbar.make(rootLayout, "Updated", Snackbar.LENGTH_SHORT)
                     .show();
         }
 
         loadPaymentDetail(id);
+
+        String colorNet = totalNet.getText().toString();
+        String colorRem = remaining.getText().toString();
+        int netInt = Integer.parseInt(colorNet);
+        int remInt = Integer.parseInt(colorRem);
+        if (netInt < 0) {
+            totalNet.setTextColor(Color.RED);
+        }
+        if (remInt < 0) {
+            remaining.setTextColor(Color.RED);
+        }
     }
 
     private void deleteItem(int position, int p) {
