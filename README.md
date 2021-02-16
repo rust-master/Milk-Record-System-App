@@ -21,7 +21,9 @@
 <h3>Dependencies | Libraries</h3>
 <ul>
   <li>Material Design
-  <li>implementation 'com.google.android.material:material:1.2.1'</li>
+    <ul>
+    <li>implementation 'com.google.android.material:material:1.2.1'</li>
+    </ul>
   </li>
   <li>Sqliteasset</li>
   <li>SQLite Database</li>
