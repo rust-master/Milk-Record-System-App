@@ -8,5 +8,5 @@
 <li>Provide Detail of milk sold and payment</li>
 <li>Clear Ledger</li>
 <li>Add Payment</li>
-Share Detail to WhatsApp</li>
+<li>Share Detail to WhatsApp</li>
 </ul>
