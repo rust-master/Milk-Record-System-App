@@ -11,4 +11,9 @@
 <li>Share Detail to WhatsApp</li>
 </ul>
 <hr>
-<h3>Tools and Languages</h3>
+<h3>Tools, Database and Languages</h3>
+<ul>
+  <li>Android Studio</li>
+  <li>Java</li>
+  <li>SQLite Database</li>
+</ul>
