@@ -10,3 +10,5 @@
 <li>Add Payment</li>
 <li>Share Detail to WhatsApp</li>
 </ul>
+<hr>
+<h3>Tools and Languages</h3>
