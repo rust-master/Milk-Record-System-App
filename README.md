@@ -17,3 +17,12 @@
   <li>Java</li>
   <li>SQLite Database</li>
 </ul>
+<hr>
+<h3>Dependencies | Libraries</h3>
+<ul>
+  <li>Material Design
+  <li>implementation 'com.google.android.material:material:1.2.1'</li>
+  </li>
+  <li>Sqliteasset</li>
+  <li>SQLite Database</li>
+</ul>
