@@ -25,6 +25,9 @@
     <li>implementation 'com.google.android.material:material:1.2.1'</li>
     </ul>
   </li>
-  <li>Sqliteasset</li>
-  <li>SQLite Database</li>
+  <li>Sqliteasset
+    <ul>
+      <li>implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'</li>
+    </ul>
+  </li>
 </ul>
