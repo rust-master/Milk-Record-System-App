@@ -169,7 +169,6 @@ public class UserLedger extends AppCompatActivity {
         LayoutInflater inflater = this.getLayoutInflater();
         View add_menu_layout = inflater.inflate(R.layout.add_payment_layout,null);
 
-
         edtPayment = add_menu_layout.findViewById(R.id.edtPayment);
 
         alertDialog.setView(add_menu_layout);
