@@ -2,6 +2,7 @@ package com.microitindustry.khatasystem.ViewHolder;
 
 import android.view.ContextMenu;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +15,8 @@ import com.microitindustry.khatasystem.R;
 public class UserViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener ,
         View.OnCreateContextMenuListener{
 
-    public TextView txt_name,txt_phone,txt_address;
+    public TextView txt_name,txt_phone, txt_address;
+    public ImageButton nextBtn;
 
     private ItemClickListener itemClickListener;
 
@@ -23,7 +25,8 @@ public class UserViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         super(itemView);
         txt_name = (TextView)itemView.findViewById(R.id.userName);
         txt_phone = (TextView)itemView.findViewById(R.id.userPhone);
-        txt_address = (TextView)itemView.findViewById(R.id.userAddress);
+        txt_address = (TextView) itemView.findViewById(R.id.userAddress);
+        nextBtn = itemView.findViewById(R.id.nextBtn);
 
         itemView.setOnCreateContextMenuListener(this);
         itemView.setOnClickListener(this);
