@@ -44,12 +44,21 @@ public class UserPayAdapter extends RecyclerView.Adapter<UserPayViewHolder>{
         holder.txt_name.setText(listData.get(position).getUserName());
         holder.txt_phone.setText(listData.get(position).getPhoneNo());
         holder.txt_address.setText(listData.get(position).getAddress());
+        holder.nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Phone No : " + listData.get(position).getPhoneNo(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, PaymentActivity.class);
+                intent.putExtra("UserPhone", String.valueOf(listData.get(position).getPhoneNo()));
+                context.startActivity(intent);
+            }
+        });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Phone No : " + listData.get(position).getPhoneNo(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, PaymentActivity.class);
-                intent.putExtra("UserPhone",String.valueOf(listData.get(position).getPhoneNo()));
+                intent.putExtra("UserPhone", String.valueOf(listData.get(position).getPhoneNo()));
                 context.startActivity(intent);
             }
         });
