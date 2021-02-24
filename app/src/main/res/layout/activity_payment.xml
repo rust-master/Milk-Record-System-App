@@ -16,9 +16,9 @@
         android:layout_height="100dp"/>
 
     <androidx.cardview.widget.CardView
-        android:layoutAnimation="@anim/layout_animation"
-        app:cardBackgroundColor="@android:color/transparent"
 
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layoutAnimation="@anim/layout_animation"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
@@ -82,7 +82,7 @@
                 android:layout_below="@+id/rel1"
                 android:layout_width="match_parent"
                 app:cardBackgroundColor="@color/white"
-                android:layout_height="150dp">
+                android:layout_height="100dp">
 
 
                 <RelativeLayout
@@ -90,9 +90,9 @@
                     android:layout_height="match_parent">
 
 
-                        <TextView
-                            android:id="@+id/txtT"
-                            android:layout_marginTop="10dp"
+                    <TextView
+                        android:id="@+id/txtT"
+                        android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/ubuntu_bold"
                             android:textSize="20sp"
